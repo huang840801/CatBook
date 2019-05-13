@@ -6,6 +6,6 @@ interface HomeContract {
 
     }
     interface Presenter{
-
+        fun test()
     }
 }
