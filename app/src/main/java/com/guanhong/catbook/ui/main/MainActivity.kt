@@ -81,6 +81,7 @@ class MainActivity : BaseActivity(),
         val adapter = MainViewPagerAdapter(supportFragmentManager, fragmentList)
 
         viewPager.adapter = adapter
+        viewPager.offscreenPageLimit = fragmentList.count() - 1
         viewPager.addOnPageChangeListener(this)
     }
 }
