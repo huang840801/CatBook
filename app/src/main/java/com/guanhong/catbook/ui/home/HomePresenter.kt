@@ -1,4 +1,6 @@
 package com.guanhong.catbook.ui.home
 
-class HomePresenter {
+import javax.inject.Inject
+
+class HomePresenter  : HomeContract.Presenter{
 }

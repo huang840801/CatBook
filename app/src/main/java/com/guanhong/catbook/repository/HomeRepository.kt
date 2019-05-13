@@ -1,4 +1,9 @@
 package com.guanhong.catbook.repository
 
-class HomeRepository {
+import com.guanhong.catbook.repository.interface1.IHomeRepository
+
+class HomeRepository: IHomeRepository {
+    override fun test() {
+
+    }
 }

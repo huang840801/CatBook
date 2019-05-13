@@ -1,4 +1,4 @@
-package com.guanhong.catbook
+package com.guanhong.catbook.ui.main
 
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager

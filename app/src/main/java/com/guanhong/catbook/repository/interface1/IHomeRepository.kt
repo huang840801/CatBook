@@ -1,4 +1,5 @@
 package com.guanhong.catbook.repository.interface1
 
-class IHomeRepository {
+interface IHomeRepository {
+    fun test()
 }
