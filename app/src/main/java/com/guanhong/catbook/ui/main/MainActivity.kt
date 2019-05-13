@@ -1,9 +1,13 @@
 package com.guanhong.catbook.ui.main
 
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.support.design.widget.BottomNavigationView
+import android.support.design.widget.NavigationView
 import android.support.v4.app.Fragment
+import android.support.v4.view.GravityCompat
 import android.support.v4.view.ViewPager
+import android.support.v7.app.ActionBarDrawerToggle
 import android.view.MenuItem
 import com.guanhong.catbook.*
 import com.guanhong.catbook.base.BaseActivity
@@ -18,7 +22,7 @@ import javax.inject.Inject
 class MainActivity : BaseActivity(),
         MainContract.View,
         BottomNavigationView.OnNavigationItemSelectedListener,
-        ViewPager.OnPageChangeListener {
+        ViewPager.OnPageChangeListener, NavigationView.OnNavigationItemSelectedListener {
 
     @Inject
     lateinit var presenter: MainPresenter
@@ -35,21 +39,41 @@ class MainActivity : BaseActivity(),
         presenter.test()
 
         bottomNavigation.setOnNavigationItemSelectedListener(this)
-
         setupViewPager()
+
+        toolbar.setPadding(0, getStatusBarHeight(), 0, 0)
+
+        setSupportActionBar(toolbar)
+        supportActionBar!!.title = "側邊攔"
+        val actionBarDrawerToggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close)
+        drawerLayout.addDrawerListener(actionBarDrawerToggle)
+        drawerLayout.clipToPadding = false
+        drawerLayout.fitsSystemWindows = true
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+
+        navigationView.setNavigationItemSelectedListener(this)
+    }
+
+    override fun onBackPressed() {
+
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            drawerLayout.closeDrawer(GravityCompat.START)
+        } else {
+            super.onBackPressed()
+        }
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
 
-        when (item.itemId){
+        when (item.itemId) {
 
-            R.id.navigation_home ->{
+            R.id.navigation_home -> {
                 viewPager.currentItem = 0
             }
-            R.id.navigation_mail ->{
+            R.id.navigation_mail -> {
                 viewPager.currentItem = 1
             }
-            R.id.navigation_notifications ->{
+            R.id.navigation_notifications -> {
                 viewPager.currentItem = 2
             }
         }
