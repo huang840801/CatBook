@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1007346258477",
+    "firebase_url": "https://catbook-c6642.firebaseio.com",
+    "project_id": "catbook-c6642",
+    "storage_bucket": "catbook-c6642.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1007346258477:android:5be0afa9c67769b8",
+        "android_client_info": {
+          "package_name": "com.guanhong.catbook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1007346258477-n4g08vivbsq2tdv8vuif7vgocnmqithg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.guanhong.catbook",
+            "certificate_hash": "afa4a28bb830a265cee7e259f45431eeda370a9e"
+          }
+        },
+        {
+          "client_id": "1007346258477-6smqred38cnlbovff0kugctllcoqd3fd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLysDog9WLU2e2KHce8RWuJo-qcCo0BNE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1007346258477-6smqred38cnlbovff0kugctllcoqd3fd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
